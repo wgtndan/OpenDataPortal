@@ -1,0 +1,24 @@
+{
+  "name": "webportal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "finalhandler": "^1.0.2",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "bin": "app.js",
+  "pkg": {
+    "assets": "public/**/*"
+  },
+  "targets": [
+      "win"
+    ]
+}

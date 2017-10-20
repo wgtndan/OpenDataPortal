@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Open Data Portal</title>
+  <link rel="stylesheet" href="./stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <script src="./javascripts/jquery-3.2.1.min.js"></script>
+  <script src="./javascripts/qlikConfigure.js"></script>
+  <script src="./javascripts/qlikAuth.js"></script>
+</head>
+
+<body>
+  <div class="panel panel-default container-fluid">
+    <header class="panel-heading"><img id="qlikLogo" src="/images/QlikLogo-RGB-WHITE.png" alt="Qlik Logo" height="69px" class="pull-right"><img id="qlikLogin"
+        class="pull-right">
+      <h1>Open Data Portal</h1>
+    </header>
+    <div class="main-content panel-body">
+      <div id="panelForm" class="panel-group">
+        <div id="appSelectForm" class="panel panel-default">
+          <div class="col-md-12 panel-heading">
+            <h4 id="SelectText">Please select a Dataset: </h4>
+          </div>
+          <div class="col-md-12 panel-body">
+            <div class="col-md-12">
+              <select id="ddAppList" name="ddAppList" class="form-control input"></select><span id="appGUID"></span>
+            </div>
+          </div>
+        </div>
+        <div id="fieldSelectForm" class="panel panel-default">
+          <div id="labels" class="col-md-12 panel-heading">
+            <h4 class="col-md-6">Dimensions</h4>
+            <h4 class="col-md-6">Measures</h4>
+          </div>
+          <div class="col-md-12 panel-body">
+            <div class="col-md-6">
+              <select id="ddDimList" name="ddDimList" multiple="multiple" class="input form-control"></select>
+            </div>
+            <div class="col-md-6">
+              <select id="ddMeasList" name="ddMeasList" multiple="multiple" class="input form-control"></select>
+            </div>
+            <div id="buttonRow" class="col-md-12">
+              <div id="left-buttons" data-toggle="buttons" class="col-md-6 btn-group">
+                <label id="table" class="btn btn-primary active">
+                    <input type="radio" name="displayOptions" id="table" autocomplete="off" checked> Straight Table
+                  </label>
+                <label id="pivot-table" class="btn btn-primary">
+                    <input type="radio" name="displayOptions" id="pivot-table" autocomplete="off"> Pivot Table
+                  </label>
+                <label id="barchart" class="btn btn-primary">
+                    <input type="radio" name="displayOptions" id="barchart" autocomplete="off"> Barchart
+                  </label>
+              </div>
+              <div id="rightbuttons" class="col-md-6">
+                <button id="btnGenerateCSV" class="pull-right btn btn-primary">Download CSV (Everything)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="resultsSelectForm" class="panel panel-default">
+          <div class="panel-body">
+            <div id="currsel" name="currsel" class="currsel"></div>
+            <div id="resultDiv" name="resultDiv" class="resultDiv col-md-10"></div>
+            <div id="resultOrder" name="resultOrder" class="resultOrder col-md-2"></div>
+          </div>
+        </div>
+      </div>
+      <script>
+        $(document).ready(function () {
+          $(fieldSelectForm).hide();
+          $(resultsSelectForm).hide();
+          $(btnGenerateCSV).hide();
+          $(table).hide();
+          $("#pivot\\-table").hide();
+          $(barchart).hide();
+        });
+      </script>
+      <div id="pagefooter" class="row panel-footer col-md-12">
+        <div class="col-md-4 pull-right"><img id="qlikLogo" src="/images/Powered-By-Qlik-Mark-Horizontal.png" alt="Powered By Qlik Logo" height="60px" class="pull-right"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
