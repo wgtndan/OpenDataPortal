@@ -46,9 +46,14 @@ This solution uses a combination of the Capabilities API and the Engine API (via
     1. Execute package deployment  
     ```npm install```
 1. Navigate to the OpenDataPortal Directory  
+*(It's Important to execute from this directory to ensure that the config.js file can be referenced correctly)*  
 ```cd C:\OpenDataPortal```
 1. Execute the Engine Connect  
 ```node .\EngineConnect\app.js```
+1. Open another Powershell window
+1. Navigate to the OpenDataPortal Directory  
+*(It's Important to execute from this directory to ensure that the config.js file can be referenced correctly)*  
+```cd C:\OpenDataPortal```
 1. Execute the WebPortal  
 ```node .\WebPortal\app.js```
 1. Try to browse available datasets 
