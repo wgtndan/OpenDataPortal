@@ -6,6 +6,9 @@ This solution uses a combination of the Capabilities API and the Engine API (via
 
 The goal was to be able to utilise Master Items to obfuscate calculation logic, and this approach meant that we could easily hide the logic from end users, whilst still giving them a high level of self service.
 
+![opendataportaldemo](https://user-images.githubusercontent.com/18130038/31976758-d2676794-b995-11e7-9bcc-23d6cfd2bfb6.gif)
+
+
 ## Human Prerequisites
 
 * Basic understanding of Node.JS, for troubleshooting
