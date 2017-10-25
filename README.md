@@ -2,7 +2,9 @@
 
 This is an approach that I worked on for a potential customer that allows for Qlik App's to be surfaced as Datasets, for the express purpose of identifying and extracting relevant information easily.
 
-This solution uses a combination of the Capabilities API and the Engine API (via qSocks) to be able to easily provide the end user with a logical workflow for data extraction.
+This solution uses a combination of the Capabilities API and the Engine API (via enigma.JS) to be able to easily provide the end user with a logical workflow for data extraction.
+
+The goal was to be able to utilise Master Items to obfuscate calculation logic, and this approach meant that we could easily hide the logic from end users, whilst still giving them a high level of self service.
 
 ## Human Prerequisites
 
