@@ -62,7 +62,7 @@ This solution uses a combination of the Capabilities API and the Engine API (via
 This file creates a JS object called config that is utilised throughout the code base. You can amend the properties of this object to alter these options for the implementation.
 
 ### State
-This is a non-utilised field, example value:
+This is a non-utilised field, please ignore.
 >  External
 ### EngineConnectPort
 This is the port that will host the intermediary API's that allow the Web Portal to interact with Qlik Sense
