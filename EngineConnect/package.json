@@ -1,7 +1,13 @@
 {
-  "name": "table-builder",
+  "name": "OpenDataPortal",
   "version": "1.0.0",
   "description": "",
+  "license": "MIT",
+  "author": "WgtnDan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WgtnDan/OpenDataPortal.git"
+  },
   "dependencies": {
     "bufferutil": "^3.0.0",
     "enigma.js": "1.0.1",

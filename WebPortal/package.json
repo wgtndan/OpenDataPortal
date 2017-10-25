@@ -1,13 +1,17 @@
 {
-  "name": "webportal",
+  "name": "OpenDataPortal",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WgtnDan/OpenDataPortal.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "WgtnDan",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.15.2",
     "finalhandler": "^1.0.2",

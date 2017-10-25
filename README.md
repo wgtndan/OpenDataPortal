@@ -4,10 +4,23 @@ This is an approach that I worked on for a potential customer that allows for Ql
 
 This solution uses a combination of the Capabilities API and the Engine API (via qSocks) to be able to easily provide the end user with a logical workflow for data extraction.
 
+## Human Prerequisites
+
+* Basic understanding of Node.JS, for troubleshooting
+* Basic understanding of Qlik Sense API's
+* Proficient in the use of the Qlik Management Console
+* Basic understanding of Qlik Ticket Authentication
+
+## Machine Prerequisites
+
+* Node.JS
+* Favourite Text Editor
+* Qlik Admin Rights (To assign user Permissions and manipulate Proxy settings)
+
+
 ## Getting Started
 
 1. Clone Rep to C:\OpenDataPortal
-1. Install Node.JS
 1. Export Certificates
     * Specify the hostname that will be used to access the server, must be the same hostname that the end users will access the WebPortal with as well.
     * Do not specify a password
@@ -39,16 +52,11 @@ This solution uses a combination of the Capabilities API and the Engine API (via
 1. Execute the WebPortal  
 ```node .\WebPortal\app.js```
 1. Try to browse available datasets 
-1. Allocate user permissions
+1. Allocate user permissions for the User Specified in Config.js
 1. Successfully Browse available datasets
 1. Fork, Expand and Improve this repository
 
-## Prerequisites
-
-* Basic understanding of Node.JS
-* Basic understanding of Qlik Sense API's
-* Proficient in the use of the Qlik Management Console
-* Basic understanding of Qlik Ticket Authentication
+![image](https://user-images.githubusercontent.com/18130038/31975639-2545ab1c-b98f-11e7-9a31-16596e6b420c.png)
 
 ## Config.JS Explained
 This file creates a JS object called config that is utilised throughout the code base. You can amend the properties of this object to alter these options for the implementation.
@@ -108,7 +116,7 @@ The name of the User to be utilised by the account that will be used to connect 
 * Tidy up of the Certificates, only require one format
 * Tidy up the config file to avoid duplicate and erroneous settings
 * Support certificate passwords
-* Upgrade to later version of Enigma.JS
+* Upgrade to later version of Enigma.JS (Currently using version 1.0.1)
 
 ## Authors
 
