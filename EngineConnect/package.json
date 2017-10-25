@@ -4,7 +4,7 @@
   "description": "",
   "dependencies": {
     "bufferutil": "^3.0.0",
-    "enigma.js": "^1.0.1",
+    "enigma.js": "1.0.1",
     "express": "^4.15.2",
     "underscore": "^1.8.3",
     "url-join": "^1.1.0",

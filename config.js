@@ -6,7 +6,7 @@ var config = {  'State' : 'External',
                 'EngineConnectHost': 'server-name',
                 'WebPortalPort': 3000,
                 'runSecureHTTPS': false,
-                'certificateDir': 'C:\\qlik\\OpenDataPortal\\certificates',
+                'certificateDir': 'C:\\OpenDataPortal\\certificates',
                 'Profile': {
                     'UserDirectory': 'NotARealDirectory', 
                     'UserId': 'OpenDataPortalUser',
