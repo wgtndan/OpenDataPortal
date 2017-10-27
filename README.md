@@ -35,7 +35,7 @@ The goal was to be able to utilise Master Items to obfuscate calculation logic, 
 1. Ensure hostname is entered in the White List for the virtual proxy
     * I'll often create a dedicated virtual proxy just for the OpenDataPortal to ensure I can manipulate settings as necessary, without impacting my primary users. This virtual proxy is not easily visible to end users.
     * If creating a Virtual Proxy, don't forget to link it to the Proxy (I always forget this part)
-1. Create the header record on the virtual proxy to allow Cross Origin access to script files e.g:  
+1. Create the header record on the virtual proxy to allow Cross Origin access to script files. In the Virtual Proxy this is in the Advanced Tab, setting the field 'Additional Response Headers' to contain:  
     ```Access-Control-Allow-Origin:*```
     * Note that this is a wildcard entry example, and should not be used for public facing production environments.
 1. Update Config.js (Refer too [Config.JS Explained](#config.js-explained))
