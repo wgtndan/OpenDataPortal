@@ -30,15 +30,16 @@ The goal was to be able to utilise Master Items to obfuscate calculation logic, 
     * Specify the hostname that will be used to access the server, must be the same hostname that the end users will access the WebPortal with as well.
     * Do not specify a password
     * Export both the PEM Format and the Windows format
-1. Copy certificate files too a location that the user running this application can access without elevated privileges i.e. 
-    > C:\OpenDataPortal\Certificates
+1. Copy certificate files too a location that the user running this application can access without elevated privileges i.e.  
+    ```C:\OpenDataPortal\Certificates```
 1. Ensure hostname is entered in the White List for the virtual proxy
     * I'll often create a dedicated virtual proxy just for the OpenDataPortal to ensure I can manipulate settings as necessary, without impacting my primary users. This virtual proxy is not easily visible to end users.
     * If creating a Virtual Proxy, don't forget to link it to the Proxy (I always forget this part)
-1. Create the header record on the virtual proxy to allow Cross Origin access to script files e.g:
-    > Access-Control-Allow-Origin:*
+1. Create the header record on the virtual proxy to allow Cross Origin access to script files e.g:  
+    ```Access-Control-Allow-Origin:*```
     * Note that this is a wildcard entry example, and should not be used for public facing production environments.
 1. Update Config.js (Refer too [Config.JS Explained](#config.js-explained))
+    * Note that although an account is specified, this does not need to exist. Qlik will create an identity record for whatever you specify based upon the trusted access created with the certificates.
 1. If not using HTTPS, ensure that your proxy has HTTP access enabled
 1. Initialise Node Dependencies
     1. Open Powershell
@@ -91,10 +92,10 @@ This is a setting that will allow the Web Portal to be hosted using the specifie
 This is the directory where the Qlik Certificates can be accessed by the user account executing the node applications.
 > C:\\OpenDataPortal\\certificates
 ### Profile.UserDirectory
-The name of the User Directory to be utilised by the account that will be used to build visualisations
+The name of the User Directory to be utilised by the account that will be used to build visualisations. This directory doesn't need to exist in your identity provider Qlik will create an identity record for whatever you specify based upon the trusted access created with the certificates.
 > NotARealDirectory
 ### Profile.UserId
-The name of the User to be utilised by the account that will be used to build visualisations
+The name of the User to be utilised by the account that will be used to build visualisations. This UserID doesn't need to exist in your identity provider Qlik will create an identity record for whatever you specify based upon the trusted access created with the certificates.
 > OpenDataPortalUser
 ### Profile.Attributes
 Any User Attributed to be utiilised by the account that will be used to build visualisations
@@ -116,10 +117,10 @@ Specify whether or not communications with the Qlik server should be done using 
 When connecting to Qlik Services should unauthorised certificates be rejected to secure communications.
 > false
 ### EngineUserProfile.UserDirectory
-The name of the User Directory to be utilised by the account that will be used to connect to the Engine Service
+The name of the User Directory to be utilised by the account that will be used to connect to the Engine Service. This Directory doesn't need to exist in your identity provider Qlik will create an identity record for whatever you specify based upon the trusted access created with the certificates.
 > NotARealDirectory
 ### EngineUserProfile.UserId
-The name of the User to be utilised by the account that will be used to connect to the Engine Service
+The name of the User to be utilised by the account that will be used to connect to the Engine Service. This UserID doesn't need to exist in your identity provider Qlik will create an identity record for whatever you specify based upon the trusted access created with the certificates.
 > OpenDataPortalUser
 
 ## Room for Improvement
